@@ -1,0 +1,14 @@
+{
+  "name": "joel-learn",
+  "version": "1.0.0",
+  "description": "learn reverse proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Zeal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

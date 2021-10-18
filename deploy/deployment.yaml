@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-2
+  labels:
+    app: my:app-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app-2
+  # use this template to create the pods
+  template:
+    metedata:
+      labels:
+        app: my-app-2
+    spec:
+      containers:
+        - name: simple-express
+          image: joelzeal/simple-express
+          ports:
+            - containerPort: 8080
+            livenessProbe:
+              httpGet:
+                path: /health
+                port: 8080
+              initialDelaySeconds: 3
+              periodSecods: 3
+    

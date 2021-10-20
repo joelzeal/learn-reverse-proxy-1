@@ -15,6 +15,6 @@ spec:
     app: my-app-2
   sessionAffinity: None
   type: ClusterIP
-  status: 
-    loadBalancer: {}
+status: 
+  loadBalancer: {}
   
